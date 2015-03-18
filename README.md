@@ -10,9 +10,18 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 And unzip it to a directory UCI_HAR_Dataset in the same level of this script
 
 # Processing steps
-* Read train data and test data seperatly using read.table
-* Read subject id for train data and test data also
-* Combind test data and train data to totalData
+1. Read train data and test data seperatly using read.table
+1. Read subject id for train data and test data also
+1. Combind test data and train data to totalData
+1. Then read the feature names from features.txt, and set them to the colnames of totalData. Note: we also add the colnames for subject id and activity label
+1. Now use grep function to search all the columns that match "mean" and "std" pattern. So that we can subset only these new columns from totalData to form newData
+1. Now we use aggregate function to group the newData by subject id and activity label
+1. The result of above step doesn't have clear column name for subject id and activity label, so we make them more clear
+1. Finaly we use write.table to save te output as "testfile.txt", with row.names=F
+
+# Reference
+* https://class.coursera.org/getdata-012/forum/thread?thread_id=9
+* https://class.coursera.org/getdata-012/forum/thread?thread_id=234
 
 
 
