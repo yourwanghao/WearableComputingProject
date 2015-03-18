@@ -58,7 +58,7 @@ actLabels <- actLabels[result$'ActivityLabel']
 result$'ActivityLabel' <- actLabels
 
 # Finally we save the data
-write.table(result, 'testfile.txt', row.names=F)
+write.table(result, 'tidydata.txt', row.names=F)
 
 
 

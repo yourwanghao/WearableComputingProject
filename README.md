@@ -20,7 +20,7 @@ And unzip it to a directory UCI_HAR_Dataset in the same level of this script
 * ./UCI_HAR_Dataset/activity_labels.txt
 
 # Output: (The request tidy data)
-* ./testfile.txt
+* ./tidydata.txt
 
 # Codebook:
 There is a codebook with description of the fields of the output tidy data, please see codebook.md file for detail
@@ -33,7 +33,7 @@ There is a codebook with description of the fields of the output tidy data, plea
 1. Now use grep function to search all the columns that match "mean" and "std" pattern. So that we can subset only these new columns from totalData to form newData
 1. Now we use aggregate function to group the newData by subject id and activity label
 1. The result of above step doesn't have clear column name for subject id and activity label, so we make them more clear
-1. Finaly we use write.table to save te output tidy data as "testfile.txt", with row.names=F
+1. Finaly we use write.table to save te output tidy data as "tidydata.txt", with row.names=F
 
 # Reference
 * https://class.coursera.org/getdata-012/forum/thread?thread_id=9
